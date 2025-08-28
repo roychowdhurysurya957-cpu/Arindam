@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Feedback System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Feedback System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <marquee>-----FACULTY FEEDBACK FORM-----</marquee>
+        <form action="/submit" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" required>
+
+            <label for="faculty">Faculty Name:</label>
+            <input type="text" name="faculty" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" required>
+
+            <label for="rating">Rating (1 to 5):</label>
+            <input type="number" name="rating" min="1" max="5" required>
+
+            <label for="comments">Comments:</label>
+            <textarea name="comments" rows="4"></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
+
+    <style>
+        * {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background:white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+   
